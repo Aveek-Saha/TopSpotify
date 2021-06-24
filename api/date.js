@@ -1,8 +1,7 @@
 var SpotifyWebApi = require('spotify-web-api-node');
 
 module.exports = (req, res) => {
-  const date = new Date().toString();
-  var scopes = ['user-read-private', 'user-read-email'],
+  var scopes = ['user-top-read'],
   redirectUri = 'http://localhost:3000/api/token',
   clientId = process.env.CLIENT_ID;
 
