@@ -7,6 +7,14 @@
         const res = await fetch("/api/date");
         const newDate = await res.text();
         date = newDate;
+        const urlParams = new URLSearchParams(window.location.search);
+        const isBeta = urlParams.has("code");
+        console.log(urlParams.get("code"));
+        const res_token = await fetch(
+            "/api/token/?code=" + urlParams.get("code")
+        );
+        const ref_token = await res_token.text();
+        console.log(ref_token);
     });
 </script>
 
