@@ -2,6 +2,7 @@
     import SpotifyWebApi from "spotify-web-api-node";
     import { onMount } from "svelte";
     export let date;
+    export let token;
 
     onMount(async () => {
         const res = await fetch("/api/date");
@@ -9,12 +10,13 @@
         date = newDate;
         const urlParams = new URLSearchParams(window.location.search);
         const isBeta = urlParams.has("code");
-        console.log(urlParams.get("code"));
-        const res_token = await fetch(
-            "/api/token/?code=" + urlParams.get("code")
-        );
-        const ref_token = await res_token.text();
-        console.log(ref_token);
+        if (isBeta) {
+            console.log(urlParams.get("code"));
+            let code = urlParams.get("code");
+            const res_token = await fetch("/api/token?code=" + code);
+            const ref_token = await res_token.text();
+            console.log(ref_token);
+        }
     });
 </script>
 

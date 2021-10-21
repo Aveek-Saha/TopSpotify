@@ -20,5 +20,7 @@ module.exports = async (req, res) => {
     spotifyApi.setRefreshToken(data.body["refresh_token"]);
     var topArtists = await (await spotifyApi.getMyTopArtists()).body.items
 
+    console.log(topArtists);
+
     res.status(200).send(topArtists);
 };
