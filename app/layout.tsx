@@ -4,9 +4,11 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 
 config.autoAddCss = false;
 
+import AuthContext from "@/components/auth/AuthContext";
+
 export const metadata = {
     title: "Top spotify",
-    description: "See all your top artists/songs/albums in one place",
+    description: "See all your top songs and albums in one place",
 };
 
 export default function RootLayout({
@@ -20,7 +22,9 @@ export default function RootLayout({
                 <link href="/globals.css" rel="stylesheet"></link>
             </head>
             <body>
-                <div className="container">{children}</div>
+                <div className="container">
+                    <AuthContext>{children}</AuthContext>
+                </div>
             </body>
         </html>
     );
