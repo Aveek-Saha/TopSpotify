@@ -1,0 +1,186 @@
+:root {
+    color-scheme: dark;
+}
+
+html {
+    --background: #121212;
+    --primary: #ffdd67;
+    --primaryShadow: #ffcc1b;
+    --secondary: #ff5a79;
+    --secondaryShadow: #f3002e;
+    --textInPrimary: #000;
+    --textInSecondary: #fff;
+    --footerBackground: #00e5ff;
+    --cardBackground: #1e1e1e;
+    --cardText: #fff;
+    --cardTextSecondary: #6c757d;
+    --cardBorder: #333333;
+    --emojiCodeText: #fff;
+    --cardShadow: none;
+    --notificationText: #fff;
+    --notificationShadow: rgba(0, 0, 0, 0.05);
+    --notificationEmojiCodeColor: rgba(0, 0, 0, 0.85);
+    --menuBackground: #ff5a79;
+    --background-body: #111111;
+    --scrollbar-thumb: #272727;
+    --scrollbar-thumb-hover: #444444;
+}
+
+body,
+html {
+    background-color: var(--background);
+    color: var(--cardText);
+    scrollbar-color: var(--scrollbar-thumb) var(--background-body);
+}
+
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #161f27;
+    background: var(--background-body);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #040a0f;
+    background: var(--scrollbar-thumb);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #040a0f;
+    background: var(--scrollbar-thumb);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0);
+    background: var(--scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0);
+    background: var(--scrollbar-thumb-hover);
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+.link:hover {
+    text-decoration: underline;
+    color: inherit;
+    cursor: pointer;
+}
+.link_img {
+    text-decoration: none;
+    color: inherit;
+}
+.a_header:hover {
+    color: var(--cardText);
+    text-decoration: underline;
+}
+.header__item,
+.header__title {
+    font-family: "Roboto Mono", "DejaVu Sans Mono", "Consolas", monospace;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.header__item {
+    float: right;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.header__title {
+    float: left;
+    justify-content: flex-start;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.header {
+    background-color: var(--background);
+}
+.card {
+    background-color: var(--cardBackground);
+}
+
+.list-group-item {
+    background-color: var(--background);
+    color: var(--cardText);
+    border-color: var(--cardBorder);
+}
+.card_list {
+    background-color: var(--cardBackground);
+    border-radius: 4px;
+    border-width: 0px;
+    box-shadow: 0 1px 2px 0 var(--cardShadow);
+    flex: 1 1;
+    cursor: pointer;
+}
+.card_list:hover {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+.card_list:active {
+    transform: scale(0.99);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.card-body_list {
+    text-align: center;
+}
+.form-control:focus {
+    background-color: var(--cardBackground);
+    color: var(--text);
+    box-shadow: none;
+}
+.inputs {
+    background-color: var(--cardBackground);
+    color: var(--text);
+    border-radius: 4px;
+    border: 0;
+    /* padding: 0.5rem; */
+}
+.search {
+    background-color: var(--cardBackground);
+    color: var(--text);
+    border-radius: 4px;
+    border: 0;
+    box-shadow: 0 2px 4px 0 var(--cardShadow);
+    flex: 1 1;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+.img-badge {
+    padding: 0.63em 0.75em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    fill: #fff;
+}
+.card_movie {
+    background-color: var(--background);
+}
+
+.input_highlight {
+    background-color: var(--cardBorder);
+    border: none;
+}
+
+.profile_tab {
+    background-color: var(--background);
+    border-bottom: none;
+}
+.profile_tab .nav-item .nav-link {
+    text-decoration: none;
+    color: var(--cardTextSecondary);
+}
+.profile_tab .nav-item .nav-link.active {
+    background-color: var(--background);
+    color: var(--cardText);
+    border: none;
+    border-bottom: 3px solid var(--cardText);
+}
