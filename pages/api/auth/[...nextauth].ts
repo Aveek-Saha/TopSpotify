@@ -13,7 +13,7 @@ export const authOptions: NextAuthOptions = {
     callbacks: {
         async jwt({ token, account }) {
             if (account) {
-                token.accessToken = account.refresh_token;
+                token.accessToken = account.access_token;
             }
             return token;
         },
