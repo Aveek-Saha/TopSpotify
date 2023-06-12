@@ -13,7 +13,7 @@ export default function Login() {
             <button
                 type="button"
                 className="btn btn-lg btn-outline-dark mb-2 mt-2"
-                style={{ color: "#ea4335" }}
+                style={{ color: "#1db954" }}
                 onClick={() => signIn("spotify")}
             >
                 <FontAwesomeIcon icon={faSpotify} /> Spotify
