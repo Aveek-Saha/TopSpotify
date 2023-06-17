@@ -24,7 +24,7 @@ export default async function Home() {
             return <Login />;
         }
         topSongs = await getTopSongs(session.token.accessToken);
-        
+
         if (topSongs.error && topSongs.error.status === 401) {
             return <Login />;
         }
@@ -34,10 +34,12 @@ export default async function Home() {
         <div>
             <h1>Hello World</h1>
             <Login />
-            {topSongs?.items?.map((song) => {
-                
-                return <MusicCard key={song.id} song={song} />;
-            })}
+
+            <div className="row row-cols-2 row-cols-xl-5 row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-xs-2 g-4 justify-content-center">
+                {topSongs?.items?.map((song) => {
+                    return <MusicCard key={song.id} song={song} />;
+                })}
+            </div>
         </div>
     );
 }

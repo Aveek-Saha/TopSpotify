@@ -11,32 +11,31 @@ export default async function MusicCard({ song }: { song: any; key: String }) {
     // console.log(getTextColor(palette.Vibrant.rgb));
 
     return (
-        <div className="card mb-3">
+        <div className="col mb-3 text-center">
             <div
-                className="row g-0"
+                className="card card_list h-100"
                 style={{ backgroundColor: palette.Vibrant.hex }}
             >
-                <div className="col-md-4">
-                    <img
-                        src={song.album.images[1].url}
-                        className="img-fluid rounded-start"
-                        alt="..."
-                        width={"100%"}
-                    />
-                </div>
+                <img
+                    src={song.album.images[1].url}
+                    className="card-img-top h-100"
+                    style={{ borderTopLeftRadius: "inherit", borderTopRightRadius: "inherit" }}
+                    alt="..."
+                    width={300}
+                    height={300}
+                />
                 <div
-                    className="col-md-8"
+                    className="card-body card-body_list"
                     style={{ color: getTextColor(palette.Vibrant.rgb) }}
                 >
-                    <div className="card-body">
-                        <h5 className="card-title">{song.name}</h5>
-                        <p className="card-text">{song.album.name}</p>
-                        <p className="card-text">
-                            <small className="text-body-secondary">
-                                {song.album.artists[0].name}
-                            </small>
-                        </p>
-                    </div>
+                    <h5 className="card-title m-2 text-truncate">
+                        {song.name}
+                    </h5>
+                    <p className="card-text">
+                        <small className="text-truncate">
+                            {song.album.artists[0].name}
+                        </small>
+                    </p>
                 </div>
             </div>
         </div>
