@@ -35,14 +35,14 @@ export default async function Home() {
         if (topSongs.error && topSongs.error.status === 401) {
             return <Login />;
         }
+        return (
+            <div className="row row-cols-2 row-cols-xl-5 row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-xs-2 g-4 justify-content-center">
+                {topSongs?.items?.map((song) => {
+                    /* @ts-expect-error Server Component */
+                    return <MusicCard key={song.id} song={song} />;
+                })}
+            </div>
+        );
     }
-
-    return (
-        <div className="row row-cols-2 row-cols-xl-5 row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-xs-2 g-4 justify-content-center">
-            {topSongs?.items?.map((song) => {
-                /* @ts-expect-error Server Component */
-                return <MusicCard key={song.id} song={song} />;
-            })}
-        </div>
-    );
+    return <Login />;
 }
