@@ -90,8 +90,8 @@ html {
 .header__item {
     float: right;
     justify-content: flex-end;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    /* font-weight: 600; */
 }
 .header__title {
     float: left;
