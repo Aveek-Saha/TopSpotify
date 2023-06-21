@@ -10,25 +10,22 @@ export default async function MusicCard({ song }: { song: any; key: String }) {
     const palette = await Vibrant.from(song.album.images[2].url).getPalette();
 
     return (
-        <div className="col mb-3 text-center">
+        <div className="col text-center">
             <div
                 className="card card_list h-100"
-                style={{ backgroundColor: palette.Vibrant?.hex }}
+                style={{ backgroundColor: palette.Muted?.hex, borderColor: palette.Muted?.hex}}
             >
                 <img
                     src={song.album.images[1].url}
-                    className="card-img-top img-fluid"
-                    style={{
-                        borderTopLeftRadius: "inherit",
-                        borderTopRightRadius: "inherit",
-                    }}
+                    className="card-img-top img-fluid rounded"
+                    
                     alt="..."
                     height={300}
                     width={300}
                 />
                 <div
                     className="card-body card-body_list"
-                    style={{ color: getTextColor(palette.Vibrant?.rgb) }}
+                    style={{ color: getTextColor(palette.Muted?.rgb) }}
                 >
                     <h5 className="card-title m-2 text-truncate">
                         {song.name}
