@@ -8,7 +8,6 @@ function getTextColor(rgb: Array<number> | any) {
 
 export default async function MusicCard({ song }: { song: any; key: String }) {
     const palette = await Vibrant.from(song.album.images[2].url).getPalette();
-    // console.log(getTextColor(palette.Vibrant.rgb));
 
     return (
         <div className="col mb-3 text-center">
@@ -18,12 +17,14 @@ export default async function MusicCard({ song }: { song: any; key: String }) {
             >
                 <img
                     src={song.album.images[1].url}
-                    className="card-img-top img-fluid h-100"
+                    className="card-img-top img-fluid"
                     style={{
                         borderTopLeftRadius: "inherit",
                         borderTopRightRadius: "inherit",
                     }}
                     alt="..."
+                    height={300}
+                    width={300}
                 />
                 <div
                     className="card-body card-body_list"

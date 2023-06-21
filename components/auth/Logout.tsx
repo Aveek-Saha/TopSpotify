@@ -16,7 +16,7 @@ export default function Logout() {
                 />
                 <span className="me-2">{session.user?.name}</span> •{" "}
                 <a className="ms-2 link" onClick={() => signOut()}>
-                    Logout <FontAwesomeIcon icon={faArrowRightFromBracket} />
+                    <FontAwesomeIcon icon={faArrowRightFromBracket} />
                 </a>
             </>
         );
