@@ -12,7 +12,7 @@ export default function Login() {
                 <h4>Check out your top tracks and albums on Spotify!</h4>
             </div>
             <div className="col"></div>
-            <div className="col d-flex aligns-items-center justify-content-center">
+            <div className="col col-10 d-flex aligns-items-center justify-content-center">
                 <button
                     type="button"
                     className="btn btn-lg btn-outline-dark mb-2 mt-2"
