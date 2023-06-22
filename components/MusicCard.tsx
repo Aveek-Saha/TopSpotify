@@ -13,21 +13,23 @@ export default async function MusicCard({ song }: { song: any; key: String }) {
         <div className="col text-center">
             <div
                 className="card card_list h-100"
-                style={{ backgroundColor: palette.Muted?.hex, borderColor: palette.Muted?.hex}}
+                style={{
+                    backgroundColor: palette.Muted?.hex,
+                    borderColor: palette.Muted?.hex,
+                }}
             >
                 <img
                     src={song.album.images[1].url}
-                    className="card-img-top img-fluid rounded"
-                    
+                    className="card-img-top img-fluid rounded album-art"
                     alt="..."
                     height={300}
                     width={300}
                 />
                 <div
                     className="card-body card-body_list"
-                    style={{ color: getTextColor(palette.Muted?.rgb) }}
+                    style={{ color: palette.DarkMuted?.hex }}
                 >
-                    <h5 className="card-title m-2 text-truncate">
+                    <h5 className="card-title m-2 text-truncate text-shadow">
                         {song.name}
                     </h5>
                     <p className="card-text">
@@ -35,7 +37,7 @@ export default async function MusicCard({ song }: { song: any; key: String }) {
                             return (
                                 <span
                                     key={artist.name}
-                                    className="badge rounded-pill m-1"
+                                    className="badge rounded-pill m-1 album-art"
                                     style={{
                                         backgroundColor:
                                             palette.DarkVibrant?.hex,
