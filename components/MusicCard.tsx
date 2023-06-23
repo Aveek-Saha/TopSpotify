@@ -1,4 +1,5 @@
 import Vibrant from "node-vibrant";
+import Image from "next/image";
 
 function getTextColor(rgb: Array<number> | any) {
     const yiq = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
@@ -18,10 +19,10 @@ export default async function MusicCard({ song }: { song: any; key: String }) {
                     borderColor: palette.Muted?.hex,
                 }}
             >
-                <img
+                <Image
                     src={song.album.images[1].url}
                     className="card-img-top img-fluid rounded album-art"
-                    alt="..."
+                    alt={song.album.name}
                     height={300}
                     width={300}
                 />
