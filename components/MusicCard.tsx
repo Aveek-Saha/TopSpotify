@@ -1,14 +1,19 @@
 import Vibrant from "node-vibrant";
 import Image from "next/image";
 
-function getTextColor(rgb: Array<number> | any) {
-    const yiq = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
-    const textColor = yiq < 150 ? "#fff" : "#000";
-    return textColor;
-}
-
-export default async function MusicCard({ song }: { song: any; key: String }) {
-    const palette = await Vibrant.from(song.album.images[2].url).getPalette();
+export default async function MusicCard({
+    images,
+    alt,
+    heading,
+    pills,
+}: {
+    images: Array<any>;
+    alt: string;
+    heading: String;
+    pills: Array<any>;
+    key: String;
+}) {
+    const palette = await Vibrant.from(images[2].url).getPalette();
 
     return (
         <div className="col text-center">
@@ -20,9 +25,9 @@ export default async function MusicCard({ song }: { song: any; key: String }) {
                 }}
             >
                 <Image
-                    src={song.album.images[1].url}
+                    src={images[1].url}
                     className="card-img-top img-fluid rounded album-art"
-                    alt={song.album.name}
+                    alt={alt}
                     height={300}
                     width={300}
                 />
@@ -31,20 +36,20 @@ export default async function MusicCard({ song }: { song: any; key: String }) {
                     style={{ color: palette.DarkMuted?.hex }}
                 >
                     <h5 className="card-title m-2 text-truncate text-shadow">
-                        {song.name}
+                        {heading}
                     </h5>
                     <p className="card-text">
-                        {song.album.artists?.map((artist: any) => {
+                        {pills?.map((pill: any) => {
                             return (
                                 <span
-                                    key={artist.name}
+                                    key={pill}
                                     className="badge rounded-pill m-1 album-art"
                                     style={{
                                         backgroundColor:
                                             palette.DarkVibrant?.hex,
                                     }}
                                 >
-                                    {artist.name}
+                                    {pill}
                                 </span>
                             );
                         })}
