@@ -1,6 +1,6 @@
  <h1 align="center">
  <br>
-  Top Spotify <img width = "32px" src = "https://user-images.githubusercontent.com/31800695/241299303-0d4fc527-3e51-4864-ab53-c0422ab678f7.png">
+  Top Tunes <img width = "32px" src = "https://user-images.githubusercontent.com/31800695/241299303-0d4fc527-3e51-4864-ab53-c0422ab678f7.png">
  
 </h1>
  
