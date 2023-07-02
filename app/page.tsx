@@ -2,6 +2,7 @@ import Login from "@/components/auth/Login";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "../pages/api/auth/[...nextauth]";
 import MusicCard from "@/components/MusicCard";
+import NavTabs from "@/components/NavTabs";
 
 async function getTopSongs(accessToken: String | unknown) {
     const TOP_ENDPOINT =
@@ -36,12 +37,15 @@ export default async function Home() {
             return <Login />;
         }
         return (
-            <div className="row row-cols-2 row-cols-xl-5 row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-xs-2 g-4 justify-content-center mb-4">
-                {topSongs?.items?.map((song) => {
-                    /* @ts-expect-error Server Component */
-                    return <MusicCard key={song.id} song={song} />;
-                })}
-            </div>
+            <>
+                <NavTabs />
+                <div className="row row-cols-2 row-cols-xl-5 row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-xs-2 g-4 justify-content-center mb-4">
+                    {topSongs?.items?.map((song) => {
+                        /* @ts-expect-error Server Component */
+                        return <MusicCard key={song.id} song={song} />;
+                    })}
+                </div>
+            </>
         );
     }
     return <Login />;

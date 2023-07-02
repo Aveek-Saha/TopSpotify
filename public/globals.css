@@ -118,10 +118,7 @@ html {
     box-shadow: 0 1px 2px 0 var(--cardShadow);
     flex: 1 1;
 }
-.text-shadow {
-    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2),
-        0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px rgba(0, 0, 0, 0.12);
-}
+
 .album-art {
     box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
         0px 24px 38px 3px rgba(0, 0, 0, 0.14),
@@ -182,4 +179,10 @@ html {
     color: var(--cardText);
     border: none;
     border-bottom: 3px solid var(--cardText);
+}
+
+.nav-time {
+    --bs-nav-underline-link-active-color: var(--cardText);
+    --bs-nav-link-color: var(--cardTextSecondary);
+    --bs-nav-link-hover-color: var(--scrollbar-thumb-hover);
 }
