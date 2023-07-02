@@ -32,7 +32,7 @@ export default async function MusicGrid({ term }: { term: String }) {
                                 images={song.album.images}
                                 alt={song.album.name}
                                 heading={song.name}
-                                pills={song.album.artist?.map((artist: any) => {
+                                pills={song.album.artists?.map((artist: any) => {
                                     return artist.name;
                                 })}
                             />

@@ -14,6 +14,8 @@ export default async function MusicCard({
     key: String;
 }) {
     const palette = await Vibrant.from(images[2].url).getPalette();
+    console.log(pills);
+    
 
     return (
         <div className="col text-center">
@@ -24,13 +26,15 @@ export default async function MusicCard({
                     borderColor: palette.Muted?.hex,
                 }}
             >
-                <Image
-                    src={images[1].url}
-                    className="card-img-top img-fluid rounded album-art"
-                    alt={alt}
-                    height={300}
-                    width={300}
-                />
+                <div className="ratio ratio-1x1">
+                    <Image
+                        src={images[1].url}
+                        className="card-img-top img-fluid rounded album-art"
+                        alt={alt}
+                        height={300}
+                        width={300}
+                    />
+                </div>
                 <div
                     className="card-body card-body_list"
                     style={{ color: palette.DarkMuted?.hex }}

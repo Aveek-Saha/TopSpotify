@@ -32,7 +32,7 @@ export default async function ArtistGrid({ term }: { term: String }) {
                                 images={artist.images}
                                 alt={artist.name}
                                 heading={artist.name}
-                                pills={artist.genres}
+                                pills={[]}
                             />
                         );
                     })}
