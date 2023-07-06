@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import MusicCard from "@/components/MusicCard";
 import NavTabs from "@/components/navigation/NavTabs";
+import NavButtons from "./navigation/NavButtons";
 import { getTopSongs, getTerm } from "@/app/utils";
 
 import type { topSongs } from "@/app/utils";
@@ -22,6 +23,7 @@ export default async function MusicGrid({ term }: { term: String }) {
         }
         return (
             <>
+                <NavButtons />
                 <NavTabs />
                 <div className="row row-cols-2 row-cols-xl-5 row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-xs-2 g-4 justify-content-center mb-4">
                     {topSongs?.items?.map((song) => {
@@ -32,9 +34,11 @@ export default async function MusicGrid({ term }: { term: String }) {
                                 images={song.album.images}
                                 alt={song.album.name}
                                 heading={song.name}
-                                pills={song.album.artists?.map((artist: any) => {
-                                    return artist.name;
-                                })}
+                                pills={song.album.artists?.map(
+                                    (artist: any) => {
+                                        return artist.name;
+                                    }
+                                )}
                             />
                         );
                     })}

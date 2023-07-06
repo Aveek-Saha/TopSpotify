@@ -43,10 +43,14 @@ export default async function MusicCard({
                         color: `hsl(${hsl[0]} ${hsl[1]}% ${hsl[2] - darken}%)`,
                     }}
                 >
-                    <h5 className="card-title m-2 mb-3 text-truncate text-shadow">
+                    <h5 className="card-title m-2 text-truncate text-shadow">
                         {heading}
                     </h5>
-                    <p className="card-text">
+                    <p
+                        className={`card-text ${
+                            pills.length > 0 ? "mt-3" : ""
+                        }`}
+                    >
                         {pills?.map((pill: any) => {
                             return (
                                 <span
@@ -54,7 +58,7 @@ export default async function MusicCard({
                                     className="badge rounded-pill album-art mw-100 text-truncate"
                                     style={{
                                         backgroundColor:
-                                            palette.DarkVibrant?.hex
+                                            palette.DarkVibrant?.hex,
                                     }}
                                 >
                                     {pill}
