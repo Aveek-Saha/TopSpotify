@@ -5,7 +5,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 
 import AuthContext from "@/components/auth/AuthContext";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {

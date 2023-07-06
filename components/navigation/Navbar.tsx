@@ -1,7 +1,7 @@
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "../pages/api/auth/[...nextauth]";
+import { authOptions } from "../../pages/api/auth/[...nextauth]";
 
-import Logout from "./auth/Logout";
+import Logout from "../auth/Logout";
 
 export default async function Navbar() {
     const session = await getServerSession(authOptions);

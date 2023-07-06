@@ -2,7 +2,7 @@ import Login from "@/components/auth/Login";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import MusicCard from "@/components/MusicCard";
-import NavTabs from "@/components/NavTabs";
+import NavTabs from "@/components/navigation/NavTabs";
 import { getTopSongs, getTerm } from "@/app/utils";
 
 import type { topSongs } from "@/app/utils";

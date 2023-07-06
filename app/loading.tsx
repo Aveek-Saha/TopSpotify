@@ -1,5 +1,5 @@
 import LoadingCard from "@/components/LoadingCard";
-import NavTabs from "@/components/NavTabs";
+import NavTabs from "@/components/navigation/NavTabs";
 
 export default function Loading() {
     return (
