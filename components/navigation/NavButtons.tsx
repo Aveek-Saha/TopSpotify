@@ -18,8 +18,8 @@ export default function NavButtons() {
     return (
         <div className="row mb-4">
             <div className="col"></div>
-            <div className="col">
-                <ul className="nav nav-pills nav-fill">
+            <div className="col-10 col-sm-8 col-md-4">
+                <ul className="nav nav-pills nav-fill nav-buttons">
                     <li className="nav-item">
                         <Link
                             className={`nav-link ${

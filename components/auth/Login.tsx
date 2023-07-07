@@ -9,7 +9,7 @@ export default function Login() {
     return (
         <div className="row align-items-center justify-content-center">
             <div className="d-flex aligns-items-center justify-content-center mb-4 mt-4">
-                <h4>Check out your top tracks and albums on Spotify!</h4>
+                <h4>Check out your top tracks and artists from Spotify!</h4>
             </div>
             <div className="col"></div>
             <div className="col col-10 d-flex aligns-items-center justify-content-center">

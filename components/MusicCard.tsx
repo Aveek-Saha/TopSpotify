@@ -9,9 +9,9 @@ export default async function MusicCard({
 }: {
     images: Array<any>;
     alt: string;
-    heading: String;
+    heading: string;
     pills: Array<any>;
-    key: String;
+    key: string;
 }) {
     const palette = await Vibrant.from(images[2].url).getPalette();
     const hsl = palette.DarkMuted?.hsl.map((value) => {
@@ -28,7 +28,7 @@ export default async function MusicCard({
                     borderColor: palette.Muted?.hex,
                 }}
             >
-                <div className="ratio ratio-1x1">
+                <div className="ratio ratio-1x1 mb-2">
                     <Image
                         src={images[1].url}
                         className="card-img-top img-fluid rounded album-art"
@@ -38,17 +38,20 @@ export default async function MusicCard({
                     />
                 </div>
                 <div
-                    className="card-body card-body_list"
+                    className="card-body card-body_list py-1 px-2"
                     style={{
                         color: `hsl(${hsl[0]} ${hsl[1]}% ${hsl[2] - darken}%)`,
                     }}
                 >
-                    <h5 className="card-title m-2 text-truncate text-shadow">
+                    <h5
+                        className="card-title m-2 text-truncate text-shadow"
+                        title={heading}
+                    >
                         {heading}
                     </h5>
                     <p
                         className={`card-text ${
-                            pills.length > 0 ? "mt-3" : ""
+                            pills.length > 0 ? "mt-2" : ""
                         }`}
                     >
                         {pills?.map((pill: any) => {
@@ -60,6 +63,7 @@ export default async function MusicCard({
                                         backgroundColor:
                                             palette.DarkVibrant?.hex,
                                     }}
+                                    title={pill}
                                 >
                                     {pill}
                                 </span>
