@@ -1,7 +1,7 @@
 import Login from "@/components/auth/Login";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
-import MusicCard from "@/components/MusicCard";
+import MusicCard from "@/components/Card";
 import NavTabs from "@/components/navigation/NavTabs";
 import NavButtons from "./navigation/NavButtons";
 import { getTopSongs, getTerm } from "@/app/utils";
