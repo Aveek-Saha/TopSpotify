@@ -1,5 +1,6 @@
 import Vibrant from "node-vibrant";
 import Image from "next/image";
+import { getTextColor } from "@/app/utils";
 
 export default async function MusicCard({
     images,
@@ -17,7 +18,11 @@ export default async function MusicCard({
     const hsl = palette.DarkMuted?.hsl.map((value) => {
         return value * 100;
     })!;
-    const darken = 10;
+    const textHSL = getTextColor(
+        palette.Muted?.rgb!,
+        palette.DarkMuted?.rgb!,
+        hsl
+    );
 
     return (
         <div className="col text-center">
@@ -32,6 +37,7 @@ export default async function MusicCard({
                     <Image
                         src={images[1].url}
                         className="card-img-top img-fluid rounded album-art"
+                        style={{ objectFit: "cover" }}
                         alt={alt}
                         height={300}
                         width={300}
@@ -40,12 +46,13 @@ export default async function MusicCard({
                 <div
                     className="card-body card-body_list py-1 px-2"
                     style={{
-                        color: `hsl(${hsl[0]} ${hsl[1]}% ${hsl[2] - darken}%)`,
+                        color: `hsl(${textHSL[0]} ${textHSL[1]}% ${textHSL[2]}%)`,
                     }}
                 >
                     <h5
                         className="card-title m-2 text-truncate text-shadow"
                         title={heading}
+                        style={{ lineHeight: "normal" }}
                     >
                         {heading}
                     </h5>

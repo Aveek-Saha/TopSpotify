@@ -39,28 +39,39 @@ export function getType(type: String) {
     return "tracks";
 }
 
-export function getTextColor(rgb: Array<number> | any, hex: string) {
-    const yiq = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
-    const textColor = yiq < 300 ? newShade(hex, -20) : newShade(hex, 20);
+function luminance(rgb: Array<number>) {
+    const RED = 0.2126;
+    const GREEN = 0.7152;
+    const BLUE = 0.0722;
+
+    const GAMMA = 2.4;
+    var a = rgb.map((v) => {
+        v /= 255;
+        return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, GAMMA);
+    });
+    return a[0] * RED + a[1] * GREEN + a[2] * BLUE;
 }
 
-function newShade(hexColor: string, magnitude: number) {
-    hexColor = hexColor.replace(`#`, ``);
-    if (hexColor.length === 6) {
-        const decimalColor = parseInt(hexColor, 16);
-        let r = (decimalColor >> 16) + magnitude;
-        r > 255 && (r = 255);
-        r < 0 && (r = 0);
-        let g = (decimalColor & 0x0000ff) + magnitude;
-        g > 255 && (g = 255);
-        g < 0 && (g = 0);
-        let b = ((decimalColor >> 8) & 0x00ff) + magnitude;
-        b > 255 && (b = 255);
-        b < 0 && (b = 0);
-        return `#${(g | (b << 8) | (r << 16)).toString(16)}`;
-    } else {
-        return hexColor;
+function contrast(rgb1: Array<number>, rgb2: Array<number>) {
+    var lum1 = luminance(rgb1);
+    var lum2 = luminance(rgb2);
+    var brightest = Math.max(lum1, lum2);
+    var darkest = Math.min(lum1, lum2);
+    return (brightest + 0.05) / (darkest + 0.05);
+}
+
+export function getTextColor(
+    rgb1: Array<number>,
+    rgb2: Array<number>,
+    hsl: Array<number>
+) {
+    const darken = 7.5;
+    const contrastRatio = contrast(rgb1, rgb2);
+
+    if (contrastRatio < 4.5) {
+        hsl = [hsl[0], hsl[1], hsl[2] - darken * (4.5 - contrastRatio)];
     }
+    return hsl;
 }
 
 export interface topSongs {
