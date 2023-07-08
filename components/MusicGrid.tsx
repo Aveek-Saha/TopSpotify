@@ -7,6 +7,7 @@ import NavButtons from "./navigation/NavButtons";
 import { getTopSongs, getTerm } from "@/app/utils";
 
 import type { topSongs } from "@/app/utils";
+import NoData from "./NoData";
 
 export default async function MusicGrid({ term }: { term: String }) {
     const session = await getServerSession(authOptions);
@@ -25,6 +26,7 @@ export default async function MusicGrid({ term }: { term: String }) {
             <>
                 <NavButtons />
                 <NavTabs />
+                {topSongs?.items?.length === 0 && <NoData />}
                 <div className="row row-cols-2 row-cols-xl-5 row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-xs-2 g-4 justify-content-center mb-4">
                     {topSongs?.items?.map((song) => {
                         return (
