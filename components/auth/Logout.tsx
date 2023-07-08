@@ -1,11 +1,10 @@
-"use client";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "../../pages/api/auth/[...nextauth]";
 
-import { signOut, useSession } from "next-auth/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import LogoutButton from "./LogoutButton";
 
-export default function Logout() {
-    const { data: session, status } = useSession();
+export default async function Logout() {
+    const session = await getServerSession(authOptions);
     if (session) {
         return (
             <>
@@ -15,9 +14,7 @@ export default function Logout() {
                     width={35}
                 />
                 <span className="me-2">{session.user?.name}</span> •{" "}
-                <a className="ms-2 link" onClick={() => signOut()}>
-                    <FontAwesomeIcon icon={faArrowRightFromBracket} />
-                </a>
+                <LogoutButton />
             </>
         );
     }
