@@ -10,7 +10,11 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
     title: "Top spotify",
-    description: "See all your top songs and albums in one place",
+    description: "Check out all your top songs and artists from Spotify",
+    icons: {
+        icon: "/favicon.ico",
+        type: "image/x-icon",
+    },
 };
 
 export default function RootLayout({
