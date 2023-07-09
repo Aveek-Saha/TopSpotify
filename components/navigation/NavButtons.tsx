@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMusic, faMicrophone } from "@fortawesome/free-solid-svg-icons";
 
 export default function NavButtons() {
     const pathname = usePathname();
@@ -27,6 +29,7 @@ export default function NavButtons() {
                             }`}
                             href={`/tracks/${term}`}
                         >
+                            <FontAwesomeIcon icon={faMusic} className="me-2" />
                             Tracks
                         </Link>
                     </li>
@@ -37,6 +40,10 @@ export default function NavButtons() {
                             }`}
                             href={`/artists/${term}`}
                         >
+                            <FontAwesomeIcon
+                                icon={faMicrophone}
+                                className="me-2"
+                            />
                             Artists
                         </Link>
                     </li>
