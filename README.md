@@ -36,7 +36,7 @@ Top spotify is an easy way to check your top song and artists on Spotify across 
 
 ## Disclaimer
 
-This project is not affiliated with Spotify or any of it´s partners in any way.
+This project is not affiliated with Spotify or any of it's partners in any way.
 
 ## Credits
 
