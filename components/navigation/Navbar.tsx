@@ -9,9 +9,9 @@ export default async function Navbar() {
     const session = await getServerSession(authOptions);
     return (
         <div className="row">
-            <header className="header mt-4 mb-4">
+            <header className="header my-4 d-flex align-items-center">
                 <h1 className="header__title">Top Spotify</h1>
-                <p className="header__item d-flex flex-wrap align-items-center">
+                <p className="header__item d-flex flex-wrap align-items-center m-0 ms-auto">
                     {session?.user && (
                         <Suspense fallback={<LoadingUser />}>
                             {/* @ts-expect-error Server Component */}
