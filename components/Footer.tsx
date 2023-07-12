@@ -1,31 +1,42 @@
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer() {
     return (
         <footer className="mt-auto">
             <div className="container">
-                <div className="d-flex justify-content-between py-4 my-4 border-top">
-                    <p className="fs-5 mb-0">
-                        Made with ♥ by{" "}
-                        <a
-                            href="https://github.com/Aveek-Saha"
-                            className="link fw-bold"
-                        >
-                            Aveek Saha
-                        </a>
-                    </p>
-                    <ul className="list-unstyled d-flex mb-0">
-                        <li className="ms-3">
-                            <a className="link fs-5" href="https://github.com/Aveek-Saha/TopSpotify">
+                <div className=" d-flex align-items-center justify-content-between py-4 my-4 border-top nav nav-justified">
+                    <div className="nav-item">
+                        <p className="mb-0 fs-5">
+                            Made by{" "}
+                            <a
+                                href="https://github.com/Aveek-Saha"
+                                className="link fw-bold"
+                            >
+                                Aveek Saha
+                            </a>
+                        </p>
+                    </div>
+                    <div className="nav-item">
+                        <p className="mb-0 fw-light small text-center">
+                            This project is not affiliated with Spotify or it's
+                            partners.
+                        </p>
+                    </div>
+                    <div className="nav-item">
+                        <p className="mb-0 fs-5">
+                            <a
+                                className="link"
+                                href="https://github.com/Aveek-Saha/TopSpotify"
+                            >
                                 <FontAwesomeIcon
                                     icon={faGithub}
                                     className="me-1"
                                 ></FontAwesomeIcon>
                                 GitHub
                             </a>
-                        </li>
-                    </ul>
+                        </p>
+                    </div>
                 </div>
             </div>
         </footer>
