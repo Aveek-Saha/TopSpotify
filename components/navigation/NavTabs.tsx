@@ -18,7 +18,7 @@ export default function NavTabs() {
     return (
         <div className="row mb-4">
             <div className="col">
-                <ul className="nav nav-underline nav-fill nav-time">
+                <ul className="nav nav-underline nav-justified nav-time">
                     <li className="nav-item">
                         <Link
                             className={`nav-link ${

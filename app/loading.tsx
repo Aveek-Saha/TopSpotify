@@ -27,7 +27,7 @@ export default function Loading() {
             </div>
             <div className="row mb-4">
                 <div className="col">
-                    <ul className="nav nav-underline nav-fill nav-time placeholder-glow">
+                    <ul className="nav nav-underline nav-justified nav-loading-time placeholder-glow">
                         <li className="nav-item">
                             <a className={`nav-link`}>
                                 <span className="placeholder col-7"></span>
