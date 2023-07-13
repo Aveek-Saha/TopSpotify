@@ -29,9 +29,9 @@ Top spotify is an easy way to check your top song and artists on Spotify across 
 ## Screenshots
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/31800695/235344512-d573dc96-4f05-4d7c-8177-fbc15e58dbfe.png" width="30%"></img>
-<img src="https://user-images.githubusercontent.com/31800695/235344514-b18420b2-0f2d-4869-8477-a0132782a54d.png" width="30%"></img>
-<img src="https://user-images.githubusercontent.com/31800695/235344517-9523cd14-c70b-47d6-80f3-3a4701e9e094.png" width="30%"></img>
+<img src="https://user-images.githubusercontent.com/31800695/235344512-d573dc96-4f05-4d7c-8177-fbc15e58dbfe.png" width="32%"></img>
+<img src="https://user-images.githubusercontent.com/31800695/235344514-b18420b2-0f2d-4869-8477-a0132782a54d.png" width="32%"></img>
+<img src="https://user-images.githubusercontent.com/31800695/235344517-9523cd14-c70b-47d6-80f3-3a4701e9e094.png" width="32%"></img>
 </div>
 
 ## Disclaimer
