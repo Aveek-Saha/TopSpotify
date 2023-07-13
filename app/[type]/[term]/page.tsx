@@ -1,6 +1,6 @@
 import { TopProps, getType } from "@/app/utils";
-import MusicGrid from "@/components/MusicGrid";
-import ArtistGrid from "@/components/ArtistGrid";
+import MusicGrid from "@/components/Songs";
+import ArtistGrid from "@/components/Artists";
 
 export default async function Home({ params }: { params: TopProps }) {
     if (getType(params.type) === "artists")

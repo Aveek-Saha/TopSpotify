@@ -35,7 +35,7 @@ export default async function CardListItem({
             >
                 <div className="row g-0">
                     <div className="col-5">
-                        <div className="ratio ratio-1x1 mb-2">
+                        <div className="ratio ratio-1x1">
                             <Image
                                 src={images[1].url}
                                 className="card-img-top img-fluid rounded album-art"

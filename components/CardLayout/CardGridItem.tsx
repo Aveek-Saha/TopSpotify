@@ -2,7 +2,7 @@ import Vibrant from "node-vibrant";
 import Image from "next/image";
 import { getTextColor } from "@/app/utils";
 
-export default async function MusicCard({
+export default async function CardGridItem({
     images,
     alt,
     heading,
@@ -33,7 +33,7 @@ export default async function MusicCard({
                     borderColor: palette.Muted?.hex,
                 }}
             >
-                <div className="ratio ratio-1x1 mb-2">
+                <div className="ratio ratio-1x1 mb-1">
                     <Image
                         src={images[1].url}
                         className="card-img-top img-fluid rounded album-art"
