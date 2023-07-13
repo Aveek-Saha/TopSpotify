@@ -8,6 +8,7 @@ import { getTopSongs, getTerm } from "@/app/utils";
 
 import type { topSongs } from "@/app/utils";
 import NoData from "./NoData";
+import MusicList from "./CardLayout/MusicList";
 
 export default async function MusicGrid({ term }: { term: String }) {
     const session = await getServerSession(authOptions);
@@ -27,23 +28,29 @@ export default async function MusicGrid({ term }: { term: String }) {
                 <NavButtons />
                 <NavTabs />
                 {topSongs?.items?.length === 0 && <NoData />}
-                <div className="row row-cols-2 row-cols-xl-5 row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-xs-2 g-4 justify-content-center mb-4">
-                    {topSongs?.items?.map((song) => {
-                        return (
-                            /* @ts-expect-error Server Component */
-                            <MusicCard
-                                key={song.id}
-                                images={song.album.images}
-                                alt={song.album.name}
-                                heading={song.name}
-                                pills={song.album.artists?.map(
-                                    (artist: any) => {
-                                        return artist.name;
-                                    }
-                                )}
-                            />
-                        );
-                    })}
+                <div className="d-none d-sm-none d-md-block">
+                    <div className="row row-cols-2 row-cols-xl-5 row-cols-lg-5 row-cols-md-4 row-cols-sm-3 row-cols-xs-2 g-4 justify-content-center mb-4">
+                        {topSongs?.items?.map((song) => {
+                            return (
+                                /* @ts-expect-error Server Component */
+                                <MusicCard
+                                    key={song.id}
+                                    images={song.album.images}
+                                    alt={song.album.name}
+                                    heading={song.name}
+                                    pills={song.album.artists?.map(
+                                        (artist: any) => {
+                                            return artist.name;
+                                        }
+                                    )}
+                                />
+                            );
+                        })}
+                    </div>
+                </div>
+
+                <div className="d-block d-sm-block d-md-none">
+                    <MusicList topSongs={topSongs} />
                 </div>
             </>
         );
