@@ -1,6 +1,6 @@
-import MusicGrid from "@/components/Songs";
+import Songs from "@/components/Songs";
 
 export default async function Home() {
     /* @ts-expect-error Server Component */
-    return <MusicGrid term={"short"} />;
+    return <Songs term={"short"} />;
 }

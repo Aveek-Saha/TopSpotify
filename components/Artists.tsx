@@ -12,7 +12,7 @@ import CardListItem from "./CardLayout/CardListItem";
 import CardGridLayout from "./CardLayout/CardGridLayout";
 import CardListLayout from "./CardLayout/CardListLayout";
 
-export default async function ArtistGrid({ term }: { term: String }) {
+export default async function Artists({ term }: { term: String }) {
     const session = await getServerSession(authOptions);
     let topArtists: topSongs = { items: [] };
     if (session) {
