@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function LoadingCard() {
+export default function LoadingCardItem() {
     return (
         <div className="col text-center">
             <div
@@ -10,14 +10,16 @@ export default function LoadingCard() {
                 }}
                 aria-hidden="true"
             >
-                <Image
-                    src="/placeholder_300_300.jpg"
-                    className="card-img-top img-fluid rounded album-art"
-                    alt="Placeholder"
-                    width={300}
-                    height={300}
-                />
-                <div className="card-body">
+                <div className="ratio ratio-1x1">
+                    <Image
+                        src="/placeholder_300_300.jpg"
+                        className="card-img-top img-fluid rounded album-art mb-2"
+                        alt="Placeholder"
+                        width={300}
+                        height={300}
+                    />
+                </div>
+                <div className="card-body" style={{ color: "#6c757d" }}>
                     <h5 className="card-title placeholder-glow">
                         <span className="placeholder col-10"></span>
                     </h5>

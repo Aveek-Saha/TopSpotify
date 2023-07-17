@@ -208,3 +208,7 @@ html {
     --bs-nav-link-color: var(--cardTextSecondary);
     --bs-nav-link-hover-color: var(--scrollbar-thumb-hover);
 }
+
+.placeholder-color {
+    color: var(--cardTextSecondary);
+}
