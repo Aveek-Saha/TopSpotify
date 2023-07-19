@@ -10,7 +10,7 @@ export default async function Navbar() {
     return (
         <div className="row">
             <header className="header my-4 d-flex align-items-center">
-                <h1 className="header__title">Top Spotify</h1>
+                <h1 className="header__title">Top Tunes Spotify</h1>
                 <p className="header__item d-flex flex-wrap align-items-center m-0 ms-auto">
                     {session?.user && (
                         <Suspense fallback={<LoadingUser />}>

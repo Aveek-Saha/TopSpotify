@@ -43,6 +43,8 @@ export default async function Artists({ term }: { term: String }) {
                                 alt={artist.name}
                                 heading={artist.name}
                                 pills={[]}
+                                headingLink={artist.external_urls.spotify}
+                                imgLink={artist.external_urls.spotify}
                             />
                         );
                     })}
@@ -58,6 +60,8 @@ export default async function Artists({ term }: { term: String }) {
                                 alt={artist.name}
                                 heading={artist.name}
                                 pills={[]}
+                                headingLink={artist.external_urls.spotify}
+                                imgLink={artist.external_urls.spotify}
                             />
                         );
                     })}

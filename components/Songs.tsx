@@ -41,9 +41,14 @@ export default async function Songs({ term }: { term: String }) {
                                 heading={song.name}
                                 pills={song.album.artists?.map(
                                     (artist: any) => {
-                                        return artist.name;
+                                        return {
+                                            name: artist.name,
+                                            link: artist.external_urls.spotify,
+                                        };
                                     }
                                 )}
+                                headingLink={song.external_urls.spotify}
+                                imgLink={song.album.external_urls.spotify}
                             />
                         );
                     })}
@@ -60,9 +65,14 @@ export default async function Songs({ term }: { term: String }) {
                                 heading={song.name}
                                 pills={song.album.artists?.map(
                                     (artist: any) => {
-                                        return artist.name;
+                                        return {
+                                            name: artist.name,
+                                            link: artist.external_urls.spotify,
+                                        };
                                     }
                                 )}
+                                headingLink={song.external_urls.spotify}
+                                imgLink={song.album.external_urls.spotify}
                             />
                         );
                     })}
