@@ -13,7 +13,7 @@ export default async function Navbar() {
             <header className="header my-4 d-flex align-items-center">
                 <h1 className="header__title">
                     <Link href={"/"} className="link">
-                        Top Tunes Spotify
+                        Top Tunes
                     </Link>
                 </h1>
                 <p className="header__item d-flex flex-wrap align-items-center m-0 ms-auto">
