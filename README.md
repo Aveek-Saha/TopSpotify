@@ -1,6 +1,6 @@
  <h1 align="center">
  <br>
-  Top Spotify <img width = "32px" src = "https://user-images.githubusercontent.com/31800695/235343147-5fac5ec2-9b97-442c-8b02-927a5d4ea4d5.png">
+  Top Spotify <img width = "32px" src = "https://user-images.githubusercontent.com/31800695/241299303-0d4fc527-3e51-4864-ab53-c0422ab678f7.png">
  
 </h1>
  
@@ -17,7 +17,7 @@ See all your top songs and artists from Spotify
 
 ## What is this?
 
-Top spotify is an easy way to check your top song and artists on Spotify across various time spans! Just log in to your Spotify account and you're all set. See all your favorites in one place.
+Top Spotify is an easy way to check your top song and artists on Spotify across various time spans! Just log in to your Spotify account and you're all set. See all your favorites in one place.
 
 ### [Check it out](https://top-spotify.vercel.app/)
 
@@ -40,4 +40,4 @@ This project is not affiliated with Spotify or any of it's partners in any way.
 
 ## Credits
 
-<div> Icons made by <a href="https://www.flaticon.com/authors/kank" title="kank"> kank </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<div> Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>

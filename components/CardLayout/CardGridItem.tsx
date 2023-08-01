@@ -44,8 +44,8 @@ export default async function CardGridItem({
                     <div className="ratio ratio-1x1 mb-1">
                         <Image
                             src={images[1].url}
-                            // className="card-img-top img-fluid rounded album-art"
-                            className="card-img-top img-fluid album-art"
+                            className="card-img-top img-fluid rounded album-art"
+                            // className="card-img-top img-fluid album-art"
                             style={{ objectFit: "cover", borderRadius: 0 }}
                             alt={alt}
                             height={300}

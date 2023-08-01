@@ -9,7 +9,7 @@ import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-    title: "Top Tunes",
+    title: "Top Spotify",
     description: "See all your top songs and artists from Spotify",
     icons: {
         icon: "/favicon.ico",
